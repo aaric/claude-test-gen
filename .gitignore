@@ -8,3 +8,13 @@ wheels/
 
 # Virtual environments
 .venv
+.env
+
+# Tool config
+.idea/
+.vscode/
+.claude/
+.langgraph_api/
+
+# Gen files
+temp/
