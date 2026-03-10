@@ -11,12 +11,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Python Version**: 3.12+ (specified in [`.python-version`](.python-version))
 - **Virtual Environment**: Located at `.venv/`
 - **Package Manager**: Uses `pyproject.toml` for project configuration
+- **Package Management Tool**: **`uv`** (NOT pip) - Always use `uv` for package management and running services
 
 ## Running the Project
 
 ```bash
-python main.py
+uv run python main.py
 ```
+
+## Important: Use uv for All Package Operations
+
+**DO NOT use pip** - Always use `uv` for:
+- Installing dependencies: `uv pip install <package>` or `uv sync`
+- Running scripts: `uv run python <script>.py`
+- Adding dependencies: `uv add <package>`
+- Virtual environment management
 
 ## Project Status
 
